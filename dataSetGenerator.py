@@ -13,7 +13,8 @@ while True:
         cv2.imwrite("dataSet/face-"+name +'.'+ str(i) + ".jpg", gray[y-offset:y+h+offset,x-offset:x+w+offset])
         cv2.rectangle(im,(x-50,y-50),(x+w+50,y+h+50),(225,0,0),2)
         cv2.imshow('im',im[y-offset:y+h+offset,x-offset:x+w+offset])
-        cv2.waitKey(100)
+        cv2.waitKey(1)
+	print(i)
     if i>20:
         cam.release()
         cv2.destroyAllWindows()
